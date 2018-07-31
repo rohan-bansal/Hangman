@@ -4,9 +4,9 @@ import random, sys, time
 
 countries = ["United States", "United Kingdom", "India", "Russia", "China", "Brazil", "Scotland", "Switzerland", "Egypt", "Japan"]
 things = ["clock", "jazz", "hangman", "grapes", "cushion", "foot", "quadrupeds", "beetle", "lamp post", "pigment", "dictionary", "java", "dragon", "pixel art", "development", "laptop"]
-beforeNafter = ["Glass of Water Buffalo", "A long Shot in the Dark", "Air Force One in a Million", "Bundle of Joy to the World", "Cake Batter Up", "Cat Food for Thought"]
+beforeNafter = ["Glass of Water Buffalo", "A Long Shot in the Dark", "Air Force One in a Million", "Bundle of Joy to the World", "Cake Batter Up", "Cat Food for Thought"]
 BookTitles = ["Wrhinkle in Time", "Catching Fire", "Harry Potter", "Maze Runner", "Percy Jackson", "Divergent", "Insurgent", "Allegiant", "Call of the Wild", "Geronimo Stilton", "Owly"]
-RhymeTime = ["A locket in your pocket", "Snail and a whale", "Beat the heat", "Double Trouble", "Fat Cat", "Hocus Pocus", "Snail Mail", "Monster Mash", ""]
+RhymeTime = ["A Locket in Your Pocket", "Snail and a Whale", "Beat the Heat", "Double Trouble", "Fat Cat", "Hocus Pocus", "Snail Mail", "Monster Mash"]
 
 choices = [
     "Countries",
@@ -31,15 +31,18 @@ class playGame():
 
     def getWord(self):
         if(self.category == 0):
-            self.announcer.config(text = "Remember to Capitalize the first letter!")
+            self.announcer.config(text = "Remember to Capitalize the first letter of each word!\n(except for 'of, in, the, a, to, for, and')")
             return random.choice(countries)
         elif(self.category == 1):
             return random.choice(things)
         elif(self.category == 2):
+            self.announcer.config(text = "Remember to Capitalize the first letter of each word!\n(except for 'of, in, the, a, to, for, and')")
             return random.choice(beforeNafter)
         elif(self.category == 3):
+            self.announcer.config(text = "Remember to Capitalize the first letter of each word!\n(except for 'of, in, the, a, to, for, and')")
             return random.choice(BookTitles)
         elif(self.category == 4):
+            self.announcer.config(text = "Remember to Capitalize the first letter of each word!\n(except for 'of, in, the, a, to, for, and')")
             return random.choice(RhymeTime)
 
     def displayWord(self):
